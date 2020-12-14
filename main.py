@@ -1,9 +1,12 @@
 from random import randint
 
 
-def generateEquation():
-    xCoefficient = randint(0, 100)
-    print(xCoefficient)
+def generateEquation(minNum, maxNum):
+    xCoefficient = randint(minNum, maxNum)
+    yCoefficient = randint(minNum, maxNum)
+    interval = yCoefficient - xCoefficient
+    constant = yCoefficient + interval
+    print(f"{xCoefficient}x + {yCoefficient}y = {constant}")
 
 
-generateEquation()
+generateEquation(0, 100)

@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Users/markmusic/opt/anaconda3/bin/python",
+    "python.pythonPath": "/Users/markmusic/opt/anaconda3/envs/py37/bin/python",
     "cSpell.words": [
         "Coeffient"
     ]
