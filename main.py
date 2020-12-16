@@ -35,4 +35,8 @@ class LinearEquationPattern:
         eq1 = self.generateEquation()
         eq2 = self.generateEquation()
 
-        print(eq2)
+        eq1XCo = self.getXCoefficient(eq1)
+        eq1YCo = self.getYCoefficient(eq1)
+
+        eq2XCo = self.getXCoefficient(eq2)
+        eq2XCo = self.getYCoefficient(eq2)
