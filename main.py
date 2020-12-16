@@ -75,6 +75,32 @@ class LinearEquationPattern:
         print(eq1)
         print(eq2)
 
+        eq1XCo = eq1XCo * -1
+        eq1YCo = eq1YCo * 2
+
+        eq2XCo = eq2XCo * -1
+        eq2YCo = eq2YCo * 2
+
+        eq1 = f"{eq1XCo} + {eq1YCo} = {eq1Const}"
+        eq2 = f"{eq2XCo} + {eq2YCo} = {eq2Const}"
+
+        print("")
+        print("Solve:")
+        print(eq1)
+        print(eq2)
+
+        eq1XCo += eq1YCo
+
+        eq2XCo += eq2YCo
+
+        eq1 = f"{eq1XCo} = {eq1Const}"
+        eq2 = f"{eq2XCo} = {eq2Const}"
+
+        print("")
+        print("Combine like terms:")
+        print(eq1)
+        print(eq2)
+
 
 obj = LinearEquationPattern(1, 9)
 
