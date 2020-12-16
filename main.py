@@ -34,3 +34,5 @@ class LinearEquationPattern:
     def solveSystem(self):
         eq1 = self.generateEquation()
         eq2 = self.generateEquation()
+
+        print(eq2)
