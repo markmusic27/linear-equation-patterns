@@ -32,8 +32,6 @@ class LinearEquationPattern:
             if eq[i - 1] == "=":
                 inConst = True
 
-            print("got here")
-
             if inConst:
                 if eq[i] == " ":
                     const = const
@@ -57,13 +55,27 @@ class LinearEquationPattern:
         eq1 = self.generateEquation()
         eq2 = self.generateEquation()
 
-        eq1XCo = self.getXCoefficient(eq1)
-        eq1YCo = self.getYCoefficient(eq1)
+        print("Original Equations:")
+        print(eq1)
+        print(eq2)
 
-        eq2XCo = self.getXCoefficient(eq2)
-        eq2XCo = self.getYCoefficient(eq2)
+        eq1XCo = int(self.getXCoefficient(eq1))
+        eq1YCo = int(self.getYCoefficient(eq1))
+        eq1Const = int(self.getConstant(eq1))
 
-        # 1️⃣ Step 1: Eliminate x
-        eq1YCo = eq1YCo * eq2XCo
+        eq2XCo = int(self.getXCoefficient(eq2))
+        eq2YCo = int(self.getYCoefficient(eq2))
+        eq2Const = int(self.getConstant(eq2))
 
-        eq1 = f"{eq1YCo}"
+        eq1 = f"-1({eq1XCo}) + 2({eq1YCo}) = {eq1Const}"
+        eq2 = f"-1({eq2XCo}) + 2({eq2YCo}) = {eq2Const}"
+
+        print("")
+        print("Plug-In Variables:")
+        print(eq1)
+        print(eq2)
+
+
+obj = LinearEquationPattern(1, 9)
+
+obj.solveSystem()
