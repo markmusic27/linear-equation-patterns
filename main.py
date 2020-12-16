@@ -22,6 +22,28 @@ class LinearEquationPattern:
 
             i += 1
 
+    def getConstant(self, eq):
+        i = 0
+        const = ""
+        inConst = False
+
+        while i < len(eq):
+
+            if eq[i - 1] == "=":
+                inConst = True
+
+            print("got here")
+
+            if inConst:
+                if eq[i] == " ":
+                    const = const
+                else:
+                    const += eq[i]
+
+            i += 1
+
+        return const
+
     def getYCoefficient(self, eq):
         i = 0
 
@@ -40,3 +62,8 @@ class LinearEquationPattern:
 
         eq2XCo = self.getXCoefficient(eq2)
         eq2XCo = self.getYCoefficient(eq2)
+
+        # 1️⃣ Step 1: Eliminate x
+        eq1YCo = eq1YCo * eq2XCo
+
+        eq1 = f"{eq1YCo}"
